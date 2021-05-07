@@ -14,15 +14,10 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-          },
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
     ],
