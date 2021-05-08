@@ -1,8 +1,9 @@
 import restaurantCard from '../components/restaurantCard';
 import DATA from '../data/DATA.json';
 
+import 'regenerator-runtime';
+
 /* for async await transpile */
-import(/* webpackPreload: true */ 'regenerator-runtime');
 import(/* webpackPreload: true */ '../styles/main.scss');
 
 window.addEventListener('load', async () => {
