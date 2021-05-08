@@ -2,68 +2,226 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps Starter Project</title>
+    <title>Restaurant</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <meta
+      name="description"
+      content="Find your perfect restaurants"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;500;600;700;900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-brand">
-          <a href="#"
-            ><img src="./images/logo/sawala.png" alt="" srcset=""
-          /></a>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-brand">
+            <a href="#" alt="Sawala"
+              ><img src="./images/logo/sawala.png" alt="Sawala"
+            /></a>
+          </div>
+          <div class="nav-toggle">
+            <button id="toggle-menu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="black"
+                width="24px"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="nav-toggle">
-          <button id="toggle-menu">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="black"
-              width="24px"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+        <div class="container menu">
+          <div class="d-none nav-link">
+            <a href="#">Home</a>
+            <a href="#">Favorite</a>
+            <a href="#">About</a>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <li class="d-none nav-link">
-          <a href="#">Home</a>
-          <a href="#">Favorite</a>
-          <a href="#">About us</a>
-        </li>
-      </div>
-    </nav>
+      </nav>
+      <section id="hero" class="heroes">
+        <h1>Find your perfect restaurant</h1>
+        <button class="main-button">Let's started</button>
+      </section>
+    </header>
     <main>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptatum totam optio officia? In sed animi beatae sapiente
-        nobis necessitatibus tempore exercitationem, possimus iste
-        consectetur rem reprehenderit obcaecati eum id numquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Consequuntur, itaque? Doloribus alias ipsum fugiat dicta atque
-        eius necessitatibus harum, tenetur, et dolores consequatur
-        quae eligendi impedit optio, cumque voluptatum deserunt.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-        consequatur quisquam quidem, libero fugit error rem deleniti
-        voluptatibus asperiores at, maiores obcaecati, illum
-        accusantium maxime deserunt! Numquam nostrum reprehenderit
-        repellendus.
-      </p>
+      <section id="restaurants" class="restaurants">
+        <div class="tagline">
+          <h2>Restaurants in top destinations</h2>
+        </div>
+        <div class="restaurants-list">
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <a href="#" class="restaurants-name"
+                >Bring Your Phone Cafe</a
+              >
+              <div class="restaurants-info">
+                <span class="rate"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  4.5 | Sumedang</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <a href="#" class="restaurants-name"
+                >Bring Your Phone Cafe</a
+              >
+              <div class="restaurants-info">
+                <span class="rate"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  4.5 | Sumedang</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <a href="#" class="restaurants-name"
+                >Bring Your Phone Cafe</a
+              >
+              <div class="restaurants-info">
+                <span class="rate"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  4.5 | Sumedang</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <a href="#" class="restaurants-name"
+                >Bring Your Phone Cafe</a
+              >
+              <div class="restaurants-info">
+                <span class="rate"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  4.5 | Sumedang</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <a href="#" class="restaurants-name"
+                >Bring Your Phone Cafe</a
+              >
+              <div class="restaurants-info">
+                <span class="rate"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  4.5 | Sumedang</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      © 2021 - Built with
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="heart"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+        />
+      </svg>
+      by
+      <a href="#" class="footer-name">Andri Junaedi</a>
+    </footer>
   </body>
 </html>
