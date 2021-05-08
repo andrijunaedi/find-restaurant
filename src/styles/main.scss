@@ -6,6 +6,10 @@
   font-family: 'Livvic', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
 }
@@ -39,6 +43,7 @@ a {
   width: 100%;
   padding: 1.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transition: 0.5s;
 
   .container {
     width: 100%;
@@ -154,6 +159,7 @@ a {
       border-radius: 0 0 0.5rem 0.5rem;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       transition: 0.3s;
+      max-height: 22rem;
 
       .card-image {
         width: 100%;
@@ -215,6 +221,16 @@ a {
           .city {
             margin-left: 0.3rem;
           }
+          .description {
+            line-height: 1.3;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            width: 100%;
+          }
         }
       }
     }
@@ -228,7 +244,8 @@ footer {
   background: linear-gradient(90deg, #cfd9df 0%, #e2ebf0 100%);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   margin-top: 3rem;
-  height: 3rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 
   .heart {
     stroke: #ef4444;
@@ -264,7 +281,6 @@ footer {
   main .restaurants .restaurants-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     align-content: flex-start;
     flex-flow: row wrap;
 
@@ -276,6 +292,10 @@ footer {
     .card {
       width: 47%;
       margin: 1rem 0;
+
+      .card-detail .restaurants-info {
+        padding-bottom: 0.1rem;
+      }
     }
   }
 }

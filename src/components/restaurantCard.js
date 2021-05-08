@@ -1,6 +1,6 @@
 const restaurantCard = (
   element,
-  { id, name, city, rating, pictureId },
+  { id, name, city, rating, pictureId, description },
 ) => {
   const div = document.createElement('div');
 
@@ -21,7 +21,8 @@ const restaurantCard = (
                   </svg>
                 <span tabindex="0" class="rating">${rating}</span> | <span tabindex="0" class="city">${city}</span>
                 </span>
-              </div>
+                <p tabindex="0" class="description">${description}</p>
+                </div>
             </div>`;
   return element.appendChild(div);
 };
