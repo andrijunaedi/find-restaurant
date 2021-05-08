@@ -14,6 +14,20 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #f2c00a;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+
+  &:focus {
+    top: 0;
+  }
+}
+
 .navbar {
   display: flex;
   position: sticky;
@@ -50,6 +64,10 @@ a {
         border: none;
         background: transparent;
         font-size: 1.2rem;
+
+        &:focus {
+          border: 1px solid #f2c00a;
+        }
       }
     }
 
@@ -188,6 +206,14 @@ a {
               margin-right: 0.5rem;
               fill: #f2c00a;
             }
+          }
+
+          .rating {
+            margin-right: 0.3rem;
+          }
+
+          .city {
+            margin-left: 0.3rem;
           }
         }
       }
