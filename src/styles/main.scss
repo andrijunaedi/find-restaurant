@@ -100,20 +100,14 @@ a {
   .main-button {
     min-height: 44px;
     min-width: 44px;
-    padding: 0.6rem;
+    padding: 1rem;
     border-radius: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 800;
     background: #f2c00a;
-    border: none;
 
     &:hover {
       color: #fff;
-    }
-
-    &:focus {
-      color: #fff;
-      border: 2px solid #fff;
     }
   }
 }
