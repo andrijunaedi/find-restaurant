@@ -1,7 +1,115 @@
+/*
+ * default - Mobile Portrait 
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  flex-wrap: wrap;
+  background: #fff;
+  max-width: 100vw;
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+  .container {
+    width: 100%;
+    flex-basis: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav-brand {
+      img {
+        width: 140px !important;
+      }
+    }
+
+    .nav-toggle {
+      button {
+        min-width: 44px;
+        min-height: 44px;
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 1.2rem;
+      }
+    }
+
+    .nav-link {
+      width: 100%;
+      display: flex;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      text-decoration: none;
+
+      a {
+        min-width: 44px;
+        min-height: 44px;
+        width: 100%;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+    }
+
+    .d-none {
+      display: none;
+    }
+  }
+}
+
+main {
+  margin-top: 500px;
+}
+
 h1 {
   color: red;
 
   &:hover {
     color: blue;
+  }
+}
+
+/*
+ * sm - Mobile Landscape
+ */
+@media (min-width: 640px) {
+  body h1 {
+    color: chartreuse;
+  }
+}
+
+/*
+ * md - Tablet
+ */
+@media (min-width: 768px) {
+  body h1 {
+    color: chocolate;
+  }
+}
+
+/*
+ * lg - Laptop / Desktop 
+ */
+@media (min-width: 1024px) {
+  body h1 {
+    color: cornflowerblue;
   }
 }
