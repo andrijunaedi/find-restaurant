@@ -19,6 +19,10 @@ a {
 }
 
 .skip-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
   position: absolute;
   top: -44px;
   left: 0;
