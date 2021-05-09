@@ -20,7 +20,7 @@ a {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -44px;
   left: 0;
   background-color: #f2c00a;
   color: #fff;
@@ -55,6 +55,13 @@ a {
     margin-right: auto;
 
     .nav-brand {
+      a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+      }
+
       img {
         width: 140px !important;
         height: 100%;
@@ -159,7 +166,7 @@ a {
       border-radius: 0 0 0.5rem 0.5rem;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       transition: 0.3s;
-      max-height: 22rem;
+      max-height: 23rem;
 
       .card-image {
         width: 100%;
@@ -192,6 +199,10 @@ a {
         margin: 1rem 0.7rem;
 
         .restaurants-name {
+          display: flex;
+          align-items: center;
+          min-height: 44px;
+          min-width: 44px;
           font-size: 1.3rem;
           font-weight: 500;
           color: #000000;
