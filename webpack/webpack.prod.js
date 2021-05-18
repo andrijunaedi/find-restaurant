@@ -2,11 +2,13 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackBar = require('webpackbar');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
+  stats: 'errors-only',
   module: {
     rules: [
       {
@@ -31,5 +33,6 @@ module.exports = merge(common, {
       path: path.resolve(__dirname, '..', './.env.production'),
     }),
     new CleanWebpackPlugin(),
+    new WebpackBar(),
   ],
 });

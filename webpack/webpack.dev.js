@@ -8,6 +8,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval-source-map',
+  stats: 'errors-warnings',
   devServer: {
     port: 3000,
     contentBase: [
