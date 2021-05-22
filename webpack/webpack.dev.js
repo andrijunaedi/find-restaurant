@@ -16,7 +16,6 @@ module.exports = merge(common, {
       path.resolve(__dirname, '..', 'dist'),
     ],
     hot: true,
-    open: true,
   },
   plugins: [
     new Dotenv({

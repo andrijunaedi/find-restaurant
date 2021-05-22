@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack server --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
-    "start": "http-server ./dist --port 5000 --silent -o",
+    "start": "http-server ./dist --port 5000 --silent",
     "test": "karma start"
   },
   "keywords": [],
