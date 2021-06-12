@@ -29,71 +29,12 @@
     />
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Go to content</a>
+    <skip-content></skip-content>
     <header id="home">
-      <nav class="navbar">
-        <div class="container">
-          <div class="nav-brand">
-            <a href="/" alt="Sawala" tabindex="0"
-              ><img
-                loading="lazy"
-                src="./images/logo/sawala.png"
-                alt="Sawala"
-            /></a>
-          </div>
-          <div class="nav-toggle">
-            <button
-              id="toggle-menu"
-              tabindex="0"
-              aria-label="menu mobile-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="black"
-                width="24px"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="container menu">
-          <div class="d-none nav-link">
-            <a tabindex="0" href="/">Home</a>
-            <a tabindex="0" href="#">Favorite</a>
-            <a
-              tabindex="0"
-              href="https://github.com/andrijunaedi/"
-              target="_blank"
-              rel="noopener"
-              >About</a
-            >
-          </div>
-        </div>
-      </nav>
-      <section id="hero" class="heroes">
-        <h1 tabindex="0">Find your perfect restaurant</h1>
-        <a tabindex="0" href="#main-content" class="main-button">
-          Let's started
-        </a>
-      </section>
+      <app-bar></app-bar>
+      <hero-app></hero-app>
     </header>
-    <main id="main-content">
-      <section id="restaurants" class="restaurants">
-        <div class="tagline">
-          <h2 tabindex="0">Restaurants in top destinations</h2>
-        </div>
-        <div class="restaurants-list"></div>
-      </section>
-    </main>
-    <footer>Copyright © 2021 - SAWALA Restaurant</footer>
+    <main id="main-content"></main>
+    <app-footer></app-footer>
   </body>
 </html>

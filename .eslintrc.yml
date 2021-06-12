@@ -23,4 +23,11 @@ rules:
           'packageDir': './',
         },
       ],
+    'no-underscore-dangle':
+      [
+        'error',
+        { 'allowAfterThis': true },
+        { 'allowAfterSuper': true },
+        { 'allowAfterThisConstructor': true },
+      ],
   }

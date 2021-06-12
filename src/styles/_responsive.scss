@@ -1,0 +1,112 @@
+/*
+ * sm - Mobile Landscape
+ */
+@media (min-width: 640px) {
+  hero-app .heroes {
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      width: 100%;
+    }
+  }
+
+  main .restaurants .restaurants-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-flow: row wrap;
+
+    .card {
+      width: 47%;
+      margin: 1rem 0;
+
+      .card-detail .restaurants-info {
+        padding-bottom: 0.1rem;
+      }
+    }
+  }
+}
+
+/*
+   * md - Tablet
+   */
+@media (min-width: 768px) {
+  header {
+    .navbar {
+      padding: 1rem;
+
+      .container {
+        flex-basis: 0;
+        margin-left: 0;
+
+        .nav-brand {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          margin: 0 3rem;
+
+          img {
+            width: 8rem;
+          }
+        }
+
+        .nav-toggle {
+          display: none;
+        }
+
+        .nav-link {
+          margin-top: 0;
+          flex-wrap: nowrap;
+          height: 100%;
+
+          a {
+            margin-right: 2rem;
+          }
+        }
+
+        .d-none {
+          display: flex;
+        }
+      }
+
+      .menu {
+        margin: 0 3rem;
+      }
+    }
+  }
+
+  main .restaurants {
+    padding: 0 4rem;
+  }
+}
+
+/*
+   * lg - Laptop / Desktop 
+   */
+@media (min-width: 1024px) {
+  header .navbar .container {
+    .nav-brand {
+      margin: 0 6rem;
+    }
+
+    .nav-link {
+      margin-right: 2rem;
+    }
+  }
+
+  hero-app .heroes {
+    padding: 10rem 0;
+  }
+
+  main .restaurants {
+    padding: 0 7rem;
+
+    .restaurants-list {
+      .card {
+        width: 23.5%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
