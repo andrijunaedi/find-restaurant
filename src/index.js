@@ -9,7 +9,7 @@ import swRegister from './utils/sw-register';
 
 /* for async await transpile */
 import(/* webpackPreload: true */ './styles/main.scss');
-import(/* webpackPreload: true */ './styles/nprogress.css');
+import(/* webpackPreload: true */ './styles/nprogress/nprogress.css');
 
 const app = new App({
   button: document.querySelector('#toggle-menu'),
