@@ -62,7 +62,7 @@ const RestaurantDetail = {
         document.querySelector('.form-review'),
         url?.id,
       );
-      addReview;
+      addReview.init();
     } catch (error) {
       console.log(error);
     }

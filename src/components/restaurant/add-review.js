@@ -7,7 +7,9 @@ class AddReview {
   constructor(formReview, id) {
     this.formReview = formReview;
     this.id = id;
+  }
 
+  init() {
     this.render();
     this._handleButton();
   }
