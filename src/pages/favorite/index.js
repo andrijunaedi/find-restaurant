@@ -1,3 +1,5 @@
+import nprogress from 'nprogress/nprogress.js';
+
 import Heroes from '../../components/heroes';
 import restaurantCard from '../../components/restaurant/restaurantCard';
 import RestaurantIdb from '../../services/restaurantIdb';
@@ -5,6 +7,7 @@ import RestaurantIdb from '../../services/restaurantIdb';
 const Favorite = {
   async render() {
     new Heroes(document.querySelector('.heroes')).hide();
+    nprogress.start();
 
     return `<section id="restaurants" class="restaurants">
     <div class="tagline">
@@ -16,6 +19,7 @@ const Favorite = {
 
   async afterRender() {
     const restaurants = await RestaurantIdb.getAll();
+    nprogress.done();
     const restaurantsList = document.querySelector(
       '.restaurants-list',
     );

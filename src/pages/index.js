@@ -1,3 +1,5 @@
+import nprogress from 'nprogress/nprogress.js';
+
 import Heroes from '../components/heroes';
 import restaurantCard from '../components/restaurant/restaurantCard';
 import Restaurant from '../services/restaurant';
@@ -7,6 +9,8 @@ const Home = {
     const heroes = new Heroes(document.querySelector('.heroes'));
     heroes.render();
     heroes.show();
+
+    nprogress.start();
 
     return `<section id="restaurants" class="restaurants">
     <div class="tagline">
@@ -18,6 +22,7 @@ const Home = {
 
   async afterRender() {
     const restaurants = await Restaurant.list();
+    nprogress.done();
     restaurants.forEach((restaurant) =>
       restaurantCard(
         document.querySelector('.restaurants-list'),

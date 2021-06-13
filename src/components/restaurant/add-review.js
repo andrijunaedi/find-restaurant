@@ -15,7 +15,7 @@ class AddReview {
     <form>
         <label>Name
             <br/>
-            <input type="text" id="input-name" name="inputName" placeholder="Type your name" required>
+            <input type="text" id="input-name" name="inputName" class="inputName" placeholder="Type your name" required>
         </label>
         <br/>
         <label>Review</br />
@@ -48,15 +48,15 @@ class AddReview {
           inputName.value = '';
           inputReview.value = '';
 
-          reviews.customerReviews.map((review) => {
+          reviews.customerReviews.forEach((review) => {
             RestaurantReview(
               document.querySelector('.review_list'),
               review,
             );
           });
         } catch (error) {
-          inputName.value = '';
-          inputReview.value = '';
+          document.querySelector('#input-name').value = '';
+          document.querySelector('#input-review').value = '';
         }
       });
   }

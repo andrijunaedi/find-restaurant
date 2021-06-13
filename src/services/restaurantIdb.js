@@ -12,12 +12,12 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 const RestaurantIdb = {
   async get(id) {
     if (!id) {
-      return;
+      return null;
     }
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
   async put(restaurant) {
-    if (!restaurant.hasOwnProperty('id')) {
+    if (!Object.prototype.hasOwnProperty.call(restaurant, 'id')) {
       return null;
     }
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);

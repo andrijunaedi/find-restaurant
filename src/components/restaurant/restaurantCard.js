@@ -11,7 +11,7 @@ const restaurantCard = (
   div.innerHTML = `
             <div class="card-image">
               <img
-              tabindex="0" src="${CONFIG.BASE_IMAGE_URL_S}/${pictureId}" alt="${name}" loading="lazy"/>
+              tabindex="0" src="${CONFIG.BASE_IMAGE_URL_M}/${pictureId}" alt="${name}" loading="lazy"/>
             </div>
             <div class="card-detail">
               <a href="#/restaurants/${id}" tabindex="0" class="restaurants-name">${name}</a>

@@ -1,3 +1,5 @@
+import nprogress from 'nprogress/nprogress.js';
+
 import restaurantDetail from '../../components/restaurant/restaurantDetail';
 import RestaurantReview from '../../components/restaurant/restaurantReview';
 import UrlParser from '../../routes/url-parser';
@@ -9,7 +11,9 @@ import AddReview from '../../components/restaurant/add-review';
 
 const RestaurantDetail = {
   async render() {
-    new Heroes(document.querySelector('.heroes')).hide();
+    const heroes = new Heroes(document.querySelector('.heroes'));
+    heroes.hide();
+    nprogress.start();
 
     return `<section id="restaurant" class="restaurant">
       <div class="restaurant_detail_card"></div>
@@ -30,6 +34,7 @@ const RestaurantDetail = {
     try {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const { restaurant } = await Restaurant.detail(url?.id);
+      nprogress.done();
 
       restaurantDetail(
         document.querySelector('.restaurant_detail_card'),
@@ -51,7 +56,11 @@ const RestaurantDetail = {
         ),
       );
 
-      new AddReview(document.querySelector('.form-review'), url?.id);
+      const addReview = new AddReview(
+        document.querySelector('.form-review'),
+        url?.id,
+      );
+      addReview();
     } catch (error) {
       console.log(error);
     }
