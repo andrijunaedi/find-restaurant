@@ -18,7 +18,7 @@ const RestaurantDetail = {
     return `<section id="restaurant" class="restaurant">
       <div class="restaurant_detail_card"></div>
       <div id="like-button-container"></div>
-      <div class="review">
+      <div class="reviews">
         <div class="review_list">
           <h2>Reviews</h2>
         </div>
@@ -49,18 +49,20 @@ const RestaurantDetail = {
         restaurant,
       });
 
-      restaurant.customerReviews.map((review) =>
-        RestaurantReview(
-          document.querySelector('.review_list'),
-          review,
-        ),
-      );
+      restaurant.customerReviews
+        .reverse()
+        .map((review) =>
+          RestaurantReview(
+            document.querySelector('.review_list'),
+            review,
+          ),
+        );
 
       const addReview = new AddReview(
         document.querySelector('.form-review'),
         url?.id,
       );
-      addReview();
+      addReview;
     } catch (error) {
       console.log(error);
     }

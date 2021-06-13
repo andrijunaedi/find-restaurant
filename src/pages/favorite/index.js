@@ -11,7 +11,7 @@ const Favorite = {
 
     return `<section id="restaurants" class="restaurants">
     <div class="tagline">
-      <h2 tabindex="0">Favorite Restaurants</h2>
+      <h1 tabindex="0">Favorite Restaurants</h1>
     </div>
     <div id="favorite" class="restaurants-list"></div>
   </section>`;
@@ -25,7 +25,7 @@ const Favorite = {
     );
 
     if (restaurants.length === 0) {
-      restaurantsList.innerHTML = `<h3 class="no-favorite"> You do not have any favorite Restaurant Here.</h3>`;
+      restaurantsList.innerHTML = `<span class="no-favorite"> You do not have any favorite Restaurant Here.</span>`;
     } else {
       restaurants.forEach((restaurant) =>
         restaurantCard(restaurantsList, restaurant),

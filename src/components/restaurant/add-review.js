@@ -1,3 +1,5 @@
+import nprogress from 'nprogress/nprogress';
+
 import Restaurant from '../../services/restaurant';
 import RestaurantReview from './restaurantReview';
 
@@ -33,27 +35,37 @@ class AddReview {
       .addEventListener('click', async (event) => {
         try {
           event.preventDefault();
+          nprogress.start();
+
           const inputName = document.querySelector('#input-name');
           const inputReview = document.querySelector('#input-review');
           const reviewList = document.querySelector('.review_list');
 
-          const response = await Restaurant.postReview({
-            id: this.id,
-            name: inputName.value,
-            review: inputReview.value,
-          });
-          const reviews = await response.json();
+          if (inputName.value === '' || inputReview.value === '') {
+            // eslint-disable-next-line no-alert
+            alert('Kolom inputan tidak boleh kosong');
+            inputName.value = '';
+            inputName.value = '';
+          } else {
+            const response = await Restaurant.postReview({
+              id: this.id,
+              name: inputName.value,
+              review: inputReview.value,
+            });
+            const reviews = await response.json();
+            nprogress.done();
 
-          reviewList.innerHTML = '';
-          inputName.value = '';
-          inputReview.value = '';
+            reviewList.innerHTML = '<h2>Reviews</h2>';
+            inputName.value = '';
+            inputReview.value = '';
 
-          reviews.customerReviews.forEach((review) => {
-            RestaurantReview(
-              document.querySelector('.review_list'),
-              review,
-            );
-          });
+            reviews.customerReviews.reverse().forEach((review) => {
+              RestaurantReview(
+                document.querySelector('.review_list'),
+                review,
+              );
+            });
+          }
         } catch (error) {
           document.querySelector('#input-name').value = '';
           document.querySelector('#input-review').value = '';

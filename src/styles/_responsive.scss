@@ -26,6 +26,28 @@
       }
     }
   }
+
+  main .restaurant_detail {
+    img {
+      height: 80vh;
+    }
+
+    .information {
+      padding: 0 3rem;
+    }
+
+    .description {
+      padding: 0 3rem;
+    }
+
+    .menus {
+      padding: 0 3rem;
+    }
+  }
+
+  main .reviews {
+    padding: 0 3rem;
+  }
 }
 
 /*
@@ -79,6 +101,13 @@
   main .restaurants {
     padding: 0 4rem;
   }
+
+  main .restaurant_detail {
+    img {
+      padding: 0 3rem;
+      height: 20rem;
+    }
+  }
 }
 
 /*
@@ -107,6 +136,68 @@
         width: 23.5%;
         margin: 1rem 0;
       }
+    }
+  }
+
+  main .restaurant_detail {
+    .container-information {
+      margin: 2rem 6rem;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 100%;
+        flex-basis: 60%;
+
+        img {
+          padding: 0;
+          border-radius: 0.5rem;
+        }
+      }
+
+      .information {
+        width: 100%;
+        flex-basis: 35%;
+      }
+    }
+
+    .description {
+      margin: 2rem 3rem;
+
+      p {
+        line-height: 1.5rem;
+      }
+    }
+
+    .menus {
+      margin: 2rem 3rem;
+
+      .category-container {
+        display: flex;
+        justify-content: space-between;
+
+        .category {
+          width: 100%;
+          flex-basis: 47%;
+        }
+      }
+    }
+  }
+
+  main .reviews {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 3rem;
+
+    .review_list {
+      width: 100%;
+      flex-basis: 47%;
+    }
+
+    .add_review {
+      width: 100%;
+      flex-basis: 47%;
     }
   }
 }
