@@ -4,7 +4,7 @@ import App from './_app';
 import './components/app-bar';
 import './components/skip-content';
 import './components/footer';
-import './components/heroes';
+// import './components/heroes';
 
 /* for async await transpile */
 import(/* webpackPreload: true */ './styles/main.scss');

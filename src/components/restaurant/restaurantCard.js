@@ -1,4 +1,4 @@
-import CONFIG from '../global/config';
+import CONFIG from '../../global/config';
 
 const restaurantCard = (
   element,

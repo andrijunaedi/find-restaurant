@@ -1,8 +1,13 @@
-import restaurantCard from '../components/restaurantCard';
-import Restaurant from '../service/restaurant';
+import Heroes from '../components/heroes';
+import restaurantCard from '../components/restaurant/restaurantCard';
+import Restaurant from '../services/restaurant';
 
 const Home = {
   async render() {
+    const heroes = new Heroes(document.querySelector('.heroes'));
+    heroes.render();
+    heroes.show();
+
     return `<section id="restaurants" class="restaurants">
     <div class="tagline">
       <h2 tabindex="0">Restaurants in top destinations</h2>
@@ -12,19 +17,12 @@ const Home = {
   },
 
   async afterRender() {
-    console.log('After Render');
-
-    /**
-     * Import DATA.json and render in DOM
-     */
     const restaurants = await Restaurant.list();
-    console.log(restaurants);
-
-    const restaurantsList = document.querySelector(
-      '.restaurants-list',
-    );
     restaurants.forEach((restaurant) =>
-      restaurantCard(restaurantsList, restaurant),
+      restaurantCard(
+        document.querySelector('.restaurants-list'),
+        restaurant,
+      ),
     );
   },
 };

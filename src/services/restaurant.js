@@ -7,7 +7,7 @@ class Restaurant {
     return response?.restaurants;
   }
 
-  static async post(data) {
+  static async postReview(data) {
     const response = await fetch(API.review, {
       method: 'POST',
       headers: {

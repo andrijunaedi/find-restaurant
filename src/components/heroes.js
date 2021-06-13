@@ -1,16 +1,23 @@
-class Heroes extends HTMLElement {
-  connectedCallback() {
-    this.render();
+class Heroes {
+  constructor(hero) {
+    this.hero = hero;
   }
 
   render() {
-    this.innerHTML = `<section id="hero" class="heroes">
+    this.hero.innerHTML = `
       <h1 tabindex="0">Find your perfect restaurant</h1>
       <a tabindex="0" href="#main-content" class="main-button">
         Let's started
-      </a>
-    </section>`;
+      </a>`;
+  }
+
+  hide() {
+    this.hero.style.display = 'none';
+  }
+
+  show() {
+    this.hero.style.display = 'block';
   }
 }
 
-customElements.define('hero-app', Heroes);
+export default Heroes;

@@ -2,7 +2,7 @@
  * sm - Mobile Landscape
  */
 @media (min-width: 640px) {
-  hero-app .heroes {
+  header .heroes {
     justify-content: center;
     text-align: center;
 
@@ -95,7 +95,7 @@
     }
   }
 
-  hero-app .heroes {
+  header .heroes {
     padding: 10rem 0;
   }
 
