@@ -1,4 +1,4 @@
-import nprogress from 'nprogress/nprogress.js';
+import nprogress from 'nprogress/nprogress';
 
 import Heroes from '../components/heroes';
 import restaurantCard from '../components/restaurant/restaurantCard';
