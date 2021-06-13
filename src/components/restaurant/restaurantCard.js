@@ -1,3 +1,5 @@
+import CONFIG from '../../global/config';
+
 const restaurantCard = (
   element,
   { id, name, city, rating, pictureId, description },
@@ -9,10 +11,10 @@ const restaurantCard = (
   div.innerHTML = `
             <div class="card-image">
               <img
-              tabindex="0" src="${pictureId}" alt="${name}" loading="lazy"/>
+              tabindex="0" src="${CONFIG.BASE_IMAGE_URL_M}/${pictureId}" alt="${name}" loading="lazy"/>
             </div>
             <div class="card-detail">
-              <a href="#restaurants/${id}" tabindex="0" class="restaurants-name">${name}</a>
+              <a href="#/restaurants/${id}" tabindex="0" class="restaurants-name">${name}</a>
               <div class="restaurants-info">
                 <span class="rate">
                   <svg xmlns="http://www.w3.org/2000/svg" class="star" viewBox="0 0 20 20">

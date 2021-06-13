@@ -1,0 +1,176 @@
+.restaurant_detail {
+  width: 100%;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .information {
+    padding: 0 1.5rem;
+
+    .name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #000000;
+    }
+  }
+
+  .description {
+    padding: 0 1.5rem;
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    p {
+      box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      border-radius: 0.5rem;
+      margin: 1.5rem 0 2rem 0;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      line-height: 1.4rem;
+      overflow: hidden;
+      font-size: 1rem;
+      display: -webkit-box;
+      width: 100%;
+    }
+  }
+
+  .menus {
+    padding: 0 1.5rem;
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    .category {
+      box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+      border-radius: 0.5rem;
+      margin: 1.5rem 0;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .category_name {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+}
+
+.reviews {
+  padding: 0 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  .review_user {
+    box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+
+    .name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .date {
+      font-size: 0.8;
+      font-weight: 400;
+    }
+
+    .review {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+.form-review {
+  box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(120, 120, 120, 0.6);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+  label {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    input {
+      min-height: 44px;
+      min-width: 44px;
+      box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      -webkit-box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      -moz-box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      border: none;
+      margin: 0.8rem 0;
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    textarea {
+      min-height: 44px;
+      min-width: 44px;
+      box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      -webkit-box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      -moz-box-shadow: 0 0 5px 0px rgba(120, 120, 120, 0.6);
+      border: none;
+      margin: 0.8rem 0;
+      width: 100%;
+      padding: 0.5rem;
+      resize: vertical;
+    }
+  }
+
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    background: #f2c00a;
+    color: #fff;
+    border: none;
+
+    &:focus {
+      border: black;
+    }
+  }
+}
+
+.like {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #f2c00a;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 1.7rem;
+  }
+}
