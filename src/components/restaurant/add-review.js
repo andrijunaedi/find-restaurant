@@ -69,6 +69,7 @@ class AddReview {
             });
           }
         } catch (error) {
+          alert('Add review gagal!');
           document.querySelector('#input-name').value = '';
           document.querySelector('#input-review').value = '';
         }

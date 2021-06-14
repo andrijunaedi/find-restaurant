@@ -64,7 +64,7 @@ const RestaurantDetail = {
       );
       addReview.init();
     } catch (error) {
-      console.log(error);
+      alert('Request failed, please check your internet access...');
     }
   },
 };

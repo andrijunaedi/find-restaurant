@@ -18,18 +18,22 @@ const Favorite = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantIdb.getAll();
-    nprogress.done();
-    const restaurantsList = document.querySelector(
-      '.restaurants-list',
-    );
-
-    if (restaurants.length === 0) {
-      restaurantsList.innerHTML = `<span class="no-favorite"> You do not have any favorite Restaurant Here.</span>`;
-    } else {
-      restaurants.forEach((restaurant) =>
-        restaurantCard(restaurantsList, restaurant),
+    try {
+      const restaurants = await RestaurantIdb.getAll();
+      nprogress.done();
+      const restaurantsList = document.querySelector(
+        '.restaurants-list',
       );
+
+      if (restaurants.length === 0) {
+        restaurantsList.innerHTML = `<span class="no-favorite"> You do not have any favorite Restaurant Here.</span>`;
+      } else {
+        restaurants.forEach((restaurant) =>
+          restaurantCard(restaurantsList, restaurant),
+        );
+      }
+    } catch (error) {
+      alert('Request failed, please check your internet access...');
     }
   },
 };
