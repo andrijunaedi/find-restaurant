@@ -21,14 +21,18 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await Restaurant.list();
-    nprogress.done();
-    restaurants.forEach((restaurant) =>
-      restaurantCard(
-        document.querySelector('.restaurants-list'),
-        restaurant,
-      ),
-    );
+    try {
+      const restaurants = await Restaurant.list();
+      nprogress.done();
+      restaurants.forEach((restaurant) =>
+        restaurantCard(
+          document.querySelector('.restaurants-list'),
+          restaurant,
+        ),
+      );
+    } catch (error) {
+      alert('Request failed, please check your internet access...');
+    }
   },
 };
 
