@@ -50,6 +50,7 @@ class AddReview {
               'Field name or review required!',
               'warning',
             );
+            nprogress.done();
             inputName.value = '';
             inputName.value = '';
           } else {
