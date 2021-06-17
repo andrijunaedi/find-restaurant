@@ -1,4 +1,5 @@
 import nprogress from 'nprogress/nprogress';
+import swal from 'sweetalert';
 
 import Heroes from '../../components/heroes';
 import restaurantCard from '../../components/restaurant/restaurantCard';
@@ -33,7 +34,11 @@ const Favorite = {
         );
       }
     } catch (error) {
-      alert('Request failed, please check your internet access...');
+      swal(
+        'Oops!',
+        'Something went wrong! \n Please check your internet access...',
+        'error',
+      );
     }
   },
 };

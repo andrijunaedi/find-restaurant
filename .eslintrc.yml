@@ -1,6 +1,7 @@
 env:
   browser: true
   es2021: true
+  jasmine: true
 extends:
   - airbnb-base
   - prettier
@@ -26,8 +27,10 @@ rules:
     'no-underscore-dangle':
       [
         'error',
-        { 'allowAfterThis': true },
-        { 'allowAfterSuper': true },
-        { 'allowAfterThisConstructor': true },
+        {
+          'allowAfterThis': true,
+          'allowAfterSuper': true,
+          'allowAfterThisConstructor': true,
+        },
       ],
   }
