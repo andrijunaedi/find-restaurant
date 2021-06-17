@@ -7,6 +7,7 @@
     "dev": "webpack server --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
     "start": "http-server ./dist --port 5000 --silent",
+    "lint": "eslint .",
     "test": "karma start"
   },
   "keywords": [],
@@ -61,8 +62,10 @@
   },
   "dependencies": {
     "idb": "^6.1.2",
+    "jpegtran-bin": "^5.0.2",
     "nprogress": "^0.2.0",
     "regenerator-runtime": "^0.13.5",
+    "sweetalert": "^2.1.2",
     "workbox-core": "^6.1.5",
     "workbox-expiration": "^6.1.5",
     "workbox-precaching": "^6.1.5",

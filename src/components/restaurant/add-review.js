@@ -1,4 +1,5 @@
 import nprogress from 'nprogress/nprogress';
+import swal from 'sweetalert';
 
 import Restaurant from '../../services/restaurant';
 import RestaurantReview from './restaurantReview';
@@ -44,8 +45,11 @@ class AddReview {
           const reviewList = document.querySelector('.review_list');
 
           if (inputName.value === '' || inputReview.value === '') {
-            // eslint-disable-next-line no-alert
-            alert('Kolom inputan tidak boleh kosong');
+            swal(
+              'Warning',
+              'Field name or review required!',
+              'warning',
+            );
             inputName.value = '';
             inputName.value = '';
           } else {
@@ -69,7 +73,7 @@ class AddReview {
             });
           }
         } catch (error) {
-          alert('Add review gagal!');
+          swal('Oops!', 'Add review failed!', 'error');
           document.querySelector('#input-name').value = '';
           document.querySelector('#input-review').value = '';
         }
