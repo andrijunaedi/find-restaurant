@@ -33,4 +33,5 @@ rules:
           'allowAfterThisConstructor': true,
         },
       ],
+    'no-return-assign': 'off',
   }
