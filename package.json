@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack server --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
+    "analyze": "webpack --config ./webpack/webpack.analyze.js",
     "start": "http-server ./dist --port 5000 --silent",
     "lint": "eslint .",
     "test": "karma start"
@@ -52,6 +53,7 @@
     "sass-loader": "^11.0.1",
     "style-loader": "^1.2.1",
     "webpack": "^5.36.2",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.0.9",
