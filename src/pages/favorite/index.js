@@ -3,6 +3,7 @@ import swal from 'sweetalert';
 
 import Heroes from '../../components/heroes';
 import restaurantCard from '../../components/restaurant/restaurantCard';
+import { restaurantCardSkeleton } from '../../components/skeleton/restaurantSkeleton';
 import RestaurantIdb from '../../services/restaurantIdb';
 
 const Favorite = {
@@ -14,6 +15,9 @@ const Favorite = {
     <div class="tagline">
       <h1 tabindex="0">Favorite Restaurants</h1>
     </div>
+    <div id="restaurant-skeleton" class="restaurant-skeleton restaurants-list">
+    ${restaurantCardSkeleton(4)}
+    </div>
     <div id="favorite" class="restaurants-list"></div>
   </section>`;
   },
@@ -22,6 +26,8 @@ const Favorite = {
     try {
       const restaurants = await RestaurantIdb.getAll();
       nprogress.done();
+      document.querySelector('#restaurant-skeleton').remove();
+
       const restaurantsList = document.querySelector(
         '.restaurants-list',
       );
