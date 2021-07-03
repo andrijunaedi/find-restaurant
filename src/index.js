@@ -7,13 +7,8 @@ import './components/app-bar';
 import './components/skip-content';
 import './components/footer';
 import swRegister from './utils/sw-register';
-// import './components/heroes';
+import './styles/main.scss';
 
-/* for async await transpile */
-import(
-  /* webpackPrefetch: true */
-  /* webpackPreload: true */ './styles/main.scss'
-);
 import(
   /* webpackPrefetch: true */
   /* webpackPreload: true */ './styles/nprogress/nprogress.css'
