@@ -6,8 +6,11 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin')
   .default;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: path.resolve(__dirname, '..', 'src/index.js'),
@@ -20,7 +23,7 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
@@ -80,6 +83,10 @@ module.exports = {
           quality: [0.3, 0.5],
         }),
       ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: isProduction ? '[name].[hash].css' : '[name].css',
+      chunkFilename: isProduction ? '[id].[hash].css' : '[id].css',
     }),
   ],
 };

@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const common = require('./webpack.common');
 
@@ -10,6 +11,8 @@ module.exports = merge(common, {
   devtool: 'source-map',
   stats: 'errors-only',
   optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
     splitChunks: {
       chunks: 'all',
       minSize: 20000,

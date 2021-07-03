@@ -59,7 +59,7 @@ const restaurantDetail = (
             tabindex="0"
             src="${CONFIG.BASE_IMAGE_URL_M}/${pictureId}"
             alt="${name}"
-            loading="lazy"
+            class="lazyload"
         />
         </div>
         <div class="information">
