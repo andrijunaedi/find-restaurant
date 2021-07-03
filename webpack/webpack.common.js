@@ -6,8 +6,6 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin')
   .default;
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin-stzhang');
 
 const path = require('path');
 
@@ -36,15 +34,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', 'src/index.html'),
       filename: 'index.html',
-    }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as(entry) {
-        if (/\.css$/.test(entry)) return 'style';
-        if (/\.woff$/.test(entry)) return 'font';
-        if (/\.png$/.test(entry)) return 'image';
-        return 'script';
-      },
     }),
     new CopyWebpackPlugin({
       patterns: [
