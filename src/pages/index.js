@@ -3,6 +3,7 @@ import swal from 'sweetalert';
 
 import Heroes from '../components/heroes';
 import restaurantCard from '../components/restaurant/restaurantCard';
+import { restaurantCardSkeleton } from '../components/skeleton/restaurantSkeleton';
 import Restaurant from '../services/restaurant';
 
 const Home = {
@@ -17,6 +18,9 @@ const Home = {
     <div class="tagline">
       <h2 tabindex="0">Restaurants in top destinations</h2>
     </div>
+    <div id="restaurant-skeleton" class="restaurant-skeleton restaurants-list">
+    ${restaurantCardSkeleton(4)}
+    </div>
     <div class="restaurants-list"></div>
   </section>`;
   },
@@ -25,6 +29,8 @@ const Home = {
     try {
       const restaurants = await Restaurant.list();
       nprogress.done();
+      document.querySelector('#restaurant-skeleton').remove();
+
       restaurants.forEach((restaurant) =>
         restaurantCard(
           document.querySelector('.restaurants-list'),

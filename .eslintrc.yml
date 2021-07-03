@@ -11,6 +11,14 @@ parserOptions:
   ecmaVersion: 12
   sourceType: module
 parser: '@babel/eslint-parser'
+globals:
+  {
+    'Feature': true,
+    'Before': true,
+    'Scenario': true,
+    'locate': true,
+    'actor': true,
+  }
 rules:
   {
     'prettier/prettier': ['error'],
@@ -33,4 +41,5 @@ rules:
           'allowAfterThisConstructor': true,
         },
       ],
+    'no-return-assign': 'off',
   }

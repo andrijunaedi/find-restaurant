@@ -106,3 +106,6 @@ dist
 # ENV
 .env.development
 .env.production
+
+# E2E outputs
+e2e/outputs/*

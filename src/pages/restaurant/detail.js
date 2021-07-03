@@ -9,6 +9,7 @@ import Restaurant from '../../services/restaurant';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import Heroes from '../../components/heroes';
 import AddReview from '../../components/restaurant/add-review';
+import { restaurantDetailSkeleton } from '../../components/skeleton/restaurantSkeleton';
 
 const RestaurantDetail = {
   async render() {
@@ -17,6 +18,9 @@ const RestaurantDetail = {
     nprogress.start();
 
     return `<section id="restaurant" class="restaurant">
+    <div id="restaurant-skeleton" class="restaurant-skeleton restaurants-list">
+    ${restaurantDetailSkeleton}
+    </div>
       <div class="restaurant_detail_card"></div>
       <div id="like-button-container"></div>
       <div class="reviews">
@@ -36,6 +40,7 @@ const RestaurantDetail = {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const { restaurant } = await Restaurant.detail(url?.id);
       nprogress.done();
+      document.querySelector('#restaurant-skeleton').remove();
 
       restaurantDetail(
         document.querySelector('.restaurant_detail_card'),
