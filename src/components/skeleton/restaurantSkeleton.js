@@ -9,7 +9,7 @@ const restaurantCardSkeleton = (count) => {
                   alt="skeleton">
               </div>
               <div class="card-detail">
-                  <a href="#" tabindex="0" class="restaurants-name skeleton h-35"></a>
+                  <a href="#" tabindex="0" class="skeleton h-35"></a>
                   <div class="ratings-skeleton skeleton h-25"></div>
               </div>
               </div>
