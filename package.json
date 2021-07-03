@@ -9,7 +9,8 @@
     "analyze": "webpack --config ./webpack/webpack.analyze.js",
     "start": "http-server ./dist --port 5000 --silent",
     "lint": "eslint .",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "yarn run codeceptjs run --steps"
   },
   "keywords": [],
   "author": "Andri Junaedi <andrijunaedi126@gmail.com>",
@@ -18,8 +19,10 @@
     "@babel/core": "^7.14.0",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/preset-env": "^7.14.1",
+    "@codeceptjs/configure": "^0.6.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "codeceptjs": "^3.0.7",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
@@ -52,6 +55,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
+    "puppeteer": "^10.1.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^1.2.1",
     "webpack": "^5.36.2",
