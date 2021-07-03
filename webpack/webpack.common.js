@@ -6,11 +6,12 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin')
   .default;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin-stzhang');
 
 const path = require('path');
 
-const isProduction = process.env.NODE_ENV === 'production';
+// const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: path.resolve(__dirname, '..', 'src/index.js'),
@@ -23,7 +24,7 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader',
           'sass-loader',
@@ -35,6 +36,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', 'src/index.html'),
       filename: 'index.html',
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as(entry) {
+        if (/\.css$/.test(entry)) return 'style';
+        if (/\.woff$/.test(entry)) return 'font';
+        if (/\.png$/.test(entry)) return 'image';
+        return 'script';
+      },
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -83,10 +93,6 @@ module.exports = {
           quality: [0.3, 0.5],
         }),
       ],
-    }),
-    new MiniCssExtractPlugin({
-      filename: isProduction ? '[name].[hash].css' : '[name].css',
-      chunkFilename: isProduction ? '[id].[hash].css' : '[id].css',
     }),
   ],
 };

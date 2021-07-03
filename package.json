@@ -54,6 +54,7 @@
     "postcss": "^8.2.14",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
+    "preload-webpack-plugin-stzhang": "^1.0.1",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "puppeteer": "^10.1.0",

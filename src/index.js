@@ -10,8 +10,14 @@ import swRegister from './utils/sw-register';
 // import './components/heroes';
 
 /* for async await transpile */
-import(/* webpackPreload: true */ './styles/main.scss');
-import(/* webpackPreload: true */ './styles/nprogress/nprogress.css');
+import(
+  /* webpackPrefetch: true */
+  /* webpackPreload: true */ './styles/main.scss'
+);
+import(
+  /* webpackPrefetch: true */
+  /* webpackPreload: true */ './styles/nprogress/nprogress.css'
+);
 
 const app = new App({
   button: document.querySelector('#toggle-menu'),
