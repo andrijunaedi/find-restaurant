@@ -44,16 +44,7 @@ class AddReview {
           const inputReview = document.querySelector('#input-review');
           const reviewList = document.querySelector('.review_list');
 
-          if (inputName.value === '' || inputReview.value === '') {
-            swal(
-              'Warning',
-              'Field name or review required!',
-              'warning',
-            );
-            nprogress.done();
-            inputName.value = '';
-            inputName.value = '';
-          } else {
+          if (inputName.value !== '' || inputReview.value !== '') {
             const response = await Restaurant.postReview({
               id: this.id,
               name: inputName.value,
@@ -67,11 +58,17 @@ class AddReview {
             inputReview.value = '';
 
             reviews.customerReviews.reverse().forEach((review) => {
-              RestaurantReview(
-                document.querySelector('.review_list'),
-                review,
-              );
+              RestaurantReview(reviewList, review);
             });
+          } else {
+            swal(
+              'Warning',
+              'Field name or review required!',
+              'warning',
+            );
+            nprogress.done();
+            inputName.value = '';
+            inputName.value = '';
           }
         } catch (error) {
           swal('Oops!', 'Add review failed!', 'error');

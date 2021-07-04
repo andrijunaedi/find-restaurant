@@ -14,10 +14,12 @@ Scenario('Add New Review', async ({ I }) => {
   const review = 'Restaurant ini keren.';
   I.fillField('#input-name', 'TEST E2E');
   I.fillField('#input-review', review);
-  I.seeElement('#review-button');
   I.click('#review-button');
+  I.wait(1);
+  I.click('#review-button');
+  I.wait(5);
 
-  const latestReview = locate('.review_user .review').first();
+  const latestReview = await locate('.review_user .review').first();
   const textLatestReview = await I.grabTextFrom(latestReview);
 
   assert.strictEqual(review, textLatestReview);
