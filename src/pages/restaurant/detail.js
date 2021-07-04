@@ -28,7 +28,7 @@ const RestaurantDetail = {
           <h2>Reviews</h2>
         </div>
         <div class="add_review"> 
-          <h2 class="text-center my-70 secondary">Add review</h2>
+          <h2 class="text-center my-70 secondary">Add your review</h2>
           <div class="form-review my-20"></div>
         </div>
     </div>
