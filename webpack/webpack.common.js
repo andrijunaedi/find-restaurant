@@ -9,8 +9,6 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin')
 
 const path = require('path');
 
-// const isProduction = process.env.NODE_ENV === 'production';
-
 module.exports = {
   entry: path.resolve(__dirname, '..', 'src/index.js'),
   output: {
