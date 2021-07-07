@@ -1,40 +1,5 @@
 import CONFIG from '../../global/config';
 
-/**
-
-class RestaurantDetail {
-  constructor(
-    element,
-    {
-      id,
-      name,
-      city,
-      address,
-      rating,
-      categories,
-      pictureId,
-      description,
-      menus,
-    },
-  ) {
-    this.element = element;
-    this.name = name;
-    this.city = city;
-    this.address = address;
-    this.rating = rating;
-    this.categories = categories;
-    this.pictureId = pictureId;
-    this.description = description;
-    this.menus = menus;
-
-    this.render();
-  }
-
-  render() {}
-}
- 
- */
-
 const restaurantDetail = (
   element,
   {
