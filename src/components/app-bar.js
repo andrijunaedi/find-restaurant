@@ -10,7 +10,7 @@ class AppBar extends HTMLElement {
           <a href="#/home" alt="Sawala" tabindex="0"
             ><img
               class="lazyload"
-              src="./images/logo/sawala.png"
+              data-src="./images/logo/sawala.png"
               alt="Sawala"
           /></a>
         </div>

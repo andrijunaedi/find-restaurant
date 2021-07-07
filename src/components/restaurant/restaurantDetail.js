@@ -57,7 +57,7 @@ const restaurantDetail = (
         <div class="image">
         <img
             tabindex="0"
-            src="${CONFIG.BASE_IMAGE_URL_M}/${pictureId}"
+            data-src="${CONFIG.BASE_IMAGE_URL_M}/${pictureId}"
             alt="${name}"
             class="lazyload"
         />
