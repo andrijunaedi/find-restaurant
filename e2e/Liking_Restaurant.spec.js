@@ -36,3 +36,29 @@ Scenario('Liking one of Restaurant', async ({ I }) => {
 
   assert.strictEqual(firstCardRestaurantTitle, likedFilmTitle);
 });
+
+Scenario('Unlike one of Restaurant', async ({ I }) => {
+  I.see(
+    'You do not have any favorite Restaurant Here.',
+    '.no-favorite',
+  );
+  I.amOnPage('/');
+  I.seeElement('.card-detail a');
+  const firstCardRestaurant = locate('.card-detail a').first();
+
+  I.click(firstCardRestaurant);
+  I.seeElement('#like-button');
+  I.click('#like-button');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('#favorite');
+  I.click(firstCardRestaurant);
+  I.seeElement('#liked-button');
+  I.click('#liked-button');
+
+  I.amOnPage('/#/favorite');
+  I.see(
+    'You do not have any favorite Restaurant Here.',
+    '.no-favorite',
+  );
+});
